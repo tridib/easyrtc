@@ -155,12 +155,12 @@ Here is some code for the actual call initiation:
 
     function performCall(easyrtcid) {
         easyrtc.call(
-           easyrtcid,
-           function(easyrtcid) { console.log("completed call to " + easyrtcid);
-           function(errorMessage) { console.log("err:" + errorMessage);
-           function(accepted, bywho) {
-              console.log((accepted?"accepted":"rejected")+ " by " + bywho);
-           }
+            easyrtcid,
+            function(easyrtcid) { console.log("completed call to " + easyrtcid);},
+            function(errorMessage) { console.log("err:" + errorMessage);},
+            function(accepted, bywho) {
+                console.log((accepted?"accepted":"rejected")+ " by " + bywho);
+            }
         );
     }
 
